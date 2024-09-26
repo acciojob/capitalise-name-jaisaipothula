@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-    Enter your name: <input type="text" id="fname">
-	
-	<script type="text/javascript" src="./script.js">
-	</script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize Name</title>
+</head>
+<body>
+    <input type="text" id="fname" placeholder="Enter your name">
+
+    <script>
+        // Function to convert input value to uppercase when it loses focus
+        function capitalizeName() {
+            const inputField = document.getElementById('fname');
+            inputField.addEventListener('blur', function() {
+                inputField.value = inputField.value.toUpperCase();
+            });
+        }
+
+        // Call the function to set up the event listener
+        capitalizeName();
+    </script>
+</body>
 </html>
